@@ -1,0 +1,21 @@
+.recipeContainer{
+    display: flex;
+    margin: 10px;
+    background-color: white;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+
+.ingList{
+    text-align:left ;
+}
+
+.pic{
+    width: 250px
+}
