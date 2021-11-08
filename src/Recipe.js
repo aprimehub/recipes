@@ -1,15 +1,16 @@
 import React from 'react'
 import './recipe.css';
 
-const Recipe = ({ title, description, pic, category, ingredients }) => {
-    // console.log('hello',title);
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-    console.log('hiiii', ingredients);
+const Recipe = ({ title, description, pic, category, ingredients, directions }) => {
+    // console.log('hello',title);
 
     return (
         <div className={'recipeContainer'}>
+             <h1>{title}</h1>
+            <div className={'row'}>
             <div>
-                <h1>{title}</h1>
                 <h2>{description}</h2>
                 <h2>{category}</h2>
                 <ul className='ingList'>
@@ -17,10 +18,15 @@ const Recipe = ({ title, description, pic, category, ingredients }) => {
                 </ul>
             </div>
             <div>
-                <img className={'pic'} src={pic} alt='whatever' />
+                <img className={'pic'} src={pic} alt='platter' />
+                <div>
+                    {documentToReactComponents(directions)}
+                </div>
             </div>
 
         </div>
+        </div>
+
     )
 }
 
