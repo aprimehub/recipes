@@ -14,7 +14,7 @@ const Recipe = ({ title, description, pic, category, ingredients, directions }) 
                 <h2>{description}</h2>
                 <h2>{category}</h2>
                 <ul className='ingList'>
-                    {ingredients === undefined ? null : ingredients.map((item, index) => <li>{item}</li>)}
+                    {ingredients === undefined ? null : ingredients.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
             </div>
             <div>
